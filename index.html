@@ -1,38 +1,63 @@
 <!DOCTYPE html>
+<!--- https://web-development-environments-2021.github.io/assignment1-ohad13/   -->
 <html>
+
 <head>
+  <title>Task 1 - Third Age Website</title>
+<br/>
+<br/>
+<br/>
+<br/>
 <link rel="stylesheet" type="text/css" href="style.css" />
+  <nav>  
+      <ul class="nav">
+          <li class ="active"><a href="#about">About Me</a></li> 
+          <li><a href="#photos">My Photos</a></li>
+          <li><a href="#playlist">My Playlist</a></li>
+          <li><a href="#like">Like</a></li>
+          <li><a href="#qrcoder">QR code</a></li>
+          <li><a href="#qa">Q&A</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+      </ul>
+  </nav>
 </head>
+
 <body>
-<div id="menu">
-<li><a href="#about">About Me</a></li>
-<li><a href="#photos">My Photos</a></li>
-<li><a href="#playlist">My Playlist</a></li>
-<li><a href="#like">Like</a></li>
-<li><a href="#qrcoder">QR code</a></li>
-<li><a href="#spa">Q&A</a></li>
-<li><a href="#contact">Contact Me</a></li>
-</div>
-		  
+  
 <section id="about" class="section">
+
+<h1>Morgan Freeman</h1>
+<marquee>I'm Morgan Freeman and this is my coolest website ever</marquee>
 <br/>
 <br/>
+<h2 class="separator">About Me</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-about me
-<br/>
+<pi>
+  Morgan was born in Memphis, Tennessee to an African-American family.
+  His father (after whom he is named) was a barber and his mother a cleaner.
+  As a child, his family moved to a number of residences, including Greenwood, Mississippi and Gary, Indiana, until it finally settled in Chicago, Illinois.
+  At the age of 12 he won a drama competition, and even appeared on a local radio show while in high school.
+  Upon graduating from high school, he was offered a drama scholarship at the local university, but he refused it and enlisted in the U.S. Air Force as a radar technician.
+  In the early 1960s Freeman lived alone in Los Angeles and worked as a clerk at the local university, in New York where he worked as a dancer, and in San Francisco he was a member of the Opera Choir.
+  From 1965 he began appearing in small plays and a number of Broadway plays, and in 1968 he appeared in the play "Hello, Dolly!" On Broadway.
+  In 1971 he first appeared in a film that was not very successful.
+  His initial arrival in the consciousness of many is mainly attributed to his appearances in two series of the PBS network: "The Electronic Society" (children's program) and the soap opera "Another World". The two were photographed during the 1970s.
+  In the 1980s he began to develop his film career, initially appearing in a film alongside Robert Redford / later appearing in a number of well-known films, including the film "Street Wisdom" (1987), for which he was nominated for an Academy Award for Best Supporting Actor.
+  Two years later he appeared in the film "Miss Daisy's Driver" (1989), for which he was nominated for an Academy Award for Best Actor.
+  Was nominated for a third Oscar in 1994 for his role in "Walls of Hope."
+  A year later he starred in the movie "Seven Sins" alongside Brad Pitt. The rest of the decade was successful for him, but with no awards or nominations for any role.
+  In 2003 he starred in the film "The Greatest Bruce of All" and also received a Lifetime Achievement Award for his contribution to cinema.
+  A year later he won the Academy Award for Best Supporting Actor for his role in "Million Dollar Baby." In 2006 he starred in the romantic drama "Up to 10 Items" alongside Pas Vega.
+  In 2007, Freeman played God in the highest-budget comedy film, A Flood of Trouble.
+  In 2008, the film "Dead for Life" (in which Freeman starred alongside actor Jack Nicholson) was released, in which he played a terminally ill person, who set out to fulfill his heart's desires before he passed away.
+  In the same year he also starred in the movie "The Dark Knight", from the Batman movie series.
+  In 2010 he starred and even co-produced the film Invictus, directed by Clint Eastwood depicting the first months of Nelson Mandela's reign in South Africa.
+  In 2016 he starred in a remake of the historical drama "Ben Hur" directed by Timur Bekambatov and starring Jack Houston, Toby Kabal and Ayelet Zorrer.
+  In 2016 he starred in the docu-program "The Story of God" on the National Geographic Channel.
+  In 2017 he won the Screen Actors Guild Award for Lifetime Achievement.
+  Since the beginning of 2019, Freeman has starred in advertisements for the Tadiran air conditioner company.
+  In 2021 he participated in the film "The Bodyguard and the Assassin's Wife". 
+</pi>
 <br/>
 <br/>
 </section>
@@ -40,23 +65,33 @@ about me
 <section id="photos" class="section">
 <br/>
 <br/>
+<h2 class="separator">My Photos</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my photos
-<br/>
-<br/>
+<!---->
+<div id="imageGallery" style="text-align: center;">    
+  <img id="image" src="src/Morgan2.jpg"  text-align="center"/>        
+</div>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script><!-- import the JQury lib-->
+
+<script>
+  $( document ).ready(function() {
+      var images = [
+          "src/Morgan2.jpg",
+          "src/Morgan3.jpg",
+          "src/Morgan4.jpg",
+          "src/Morgan5.jpg"    
+      ];
+      var imageIndex = 0;
+      $("#image").on("click", function(){          
+          imageIndex = (imageIndex + images.length -1) % (images.length);    
+          $("#image").attr('src', images[imageIndex]);
+      });
+      $("#image").attr(images[0]);
+
+  });
+</script>
+<!---->
 <br/>
 </section>
 
@@ -64,22 +99,15 @@ my photos
 <br/>
 <br/>
 <br/>
+
+<h2 class="separator">My favorite song</h2>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-my playlist
-<br/>
-<br/>
+    <div style="text-align: center;" > <!-- center what inside this div -->
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SH3KlDlqu_k" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen></iframe>
 <br/>
 </section>
 
@@ -91,103 +119,187 @@ my playlist
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-give me a like
-<br/>
-<br/>
-<br/>
+<h2 class="separator">Like and Share</h2>
+    <p>Like my facbook account </p>
+      <script async defer crossorigin="anonymous" 
+      src="https://www.facebook.com/MorganFreeman" nonce="h6p3VzKA">
+      </script>
+
+<div id="fb-root"></div>
+
+    <div style="text-align: center;">
+
+      <script async defer crossorigin="anonymous"
+      src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v13.0" nonce="Sk4ZBw9B"></script>
+      <div class="fb-like" data-href="https://www.facebook.com/MorganFreeman" data-width="123px" 
+      data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>
+      
+
+
+    </div>
 </section>
 
 <section id="qrcoder" class="section">
 <br/>
+
+<br/>
+<br/>
+<h2 class="separator">Scan my code</h2>
+<p>You can send this QR code to your friends so they can join us on the website</p>
+<br/>
+    <div style="text-align: center;"> <!-- center what inside this div-->
+      <img src="src/QRcode.png" alt="cat" width="200" height="200" >
+    </div>
+</section>
+<section id="qa" class="section">
 <br/>
 <br/>
 <br/>
+
+<h2 class="separator">Answers</h2>
+<h1> Q1 </h1>
+<table id="TableAns1" cellpadding="0" cellspacing="0" bordercolor="red" width="70%">
+  <tbody> 
+    <tr>
+      <td>
+        <h2>Web 3.0</h2>
+      </td>
+      <td>
+        <h2>Web 2.0</h2>
+      </td>
+      <td>
+        <h2>Web 1.0</h2>
+      </td>
+      <td>
+        <h2>הבדלים</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>חכם, משלב בינה מלאכותית</td>
+      <td>דינמי, שיתופי, קהילתי</td>
+      <td>תוכן סטטי</td>
+      <td>אופי האתר</td>
+    </tr>
+    <tr>
+      <td>קריאה, כתיבה וביצוע</td>
+      <td>ניתן לקרוא ולכתוב</td>
+      <td>קריאה בלבד</td>
+      <td>אופן השימוש באתר</td>
+    </tr>
+    <tr>
+      <td>תוכן חכם המותאם לגולש, יודע עליו מידע ומתאים לו</td>
+      <td>בלוגים, רשתות חברתיות</td>
+      <td>מידע, כמו שעות פעילות, מיקום החנות וכו׳</td>
+      <td>דוגמאות</td>
+    </tr>
+  </tbody>
+</table>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-scan my code
+<h1>Q2</h1>
+<p>דוגמה של תרחיש שימוש חיפוש מוצר באתר אלי אקספרס</p>
+<table id="TableAns2" cellpadding="0" cellspacing="0" bordercolor="red" width="70%">
+  <col width="20px" />
+  <col width="30px" />
+  <col width="40px" />
+  <tbody>
+    <tr>
+      <td>
+        <h2>Web 3.0</h2>
+      </td>
+      <td>
+        <h2>Web 2.0</h2>
+      </td>
+      <td>
+        <h2>Web 1.0</h2>
+      </td>
+    </tr>
+    <tr> 
+      <td>לפי החיפוש ולפי היסטוריית הקנייה של המשתמש, בעת החיפוש יופיע בנוסף גם מוצרים שהאתר מצא כרלוונטיים</td>
+      <td>חוץ מהמוצר שהמשתמש חיפש, יציג האתר בנוסף גם ביקורות ודירוגים רלוונטיים</td>
+      <td>האתר יאתר את המוצר הספציפי שהתבקש ויציג אותו בלבד</td>
+    </tr>
+  </tbody>
+</table>
 <br/>
 <br/>
 <br/>
 </section>
-
-<section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-ans
-<br/>
-<br/>
-<br/>
-</section>
-
 <section id="contact" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-contact me
-<br/>
-<br/>
-<br/>
+  <h2 class="separator">Contact me</h2>
+  We are more then happy to hear from you about any thing you like
+    <form action="https://formsubmit.co/miller.ohad@gmail.com" enctype="text/plain" method="POST">
+      <input style="width: 400px; height: 20px;" title="מייל השולח" type="email" name="email" placeholder="Email Address from" required></br>
+      <!--input  title="תוכן ההודעה" id="emo1" type="text" name="name" placeholder="text" white-space="pre"; required></br-->
+      <textarea id="emo" style="width: 400px; height: 100px;" title="תוכן ההודעה" placeholder="text" wrap="soft"></textarea>
+      <input type="hidden" name="_next" value="https://web-development-environments-2021.github.io/assignment1-ohad13/">
+      <button title="שלח" type="submit">Submit</button></br>
+      <button onclick="toggleEmojiDrawer()">Emojis</button></br>
+
+      <input type="hidden" name="_captcha" value="false"> <!-- remove the: "not a robot" page -->
+    </form> 
+        <div id="drawer" class="emoji-drawer hidden"> 
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😄</div>
+          <!--
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😁</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😆</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🧐</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">✌</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😍</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😎</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😂</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🤓</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😔</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😘</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">😱</div>
+          <div class="emoji" onclick="addEmoji(this.innerHTML)">🤠</div>
+        -->
+        </div>
+    
+    <!-- Social Buttons-->
+    <p text-align="center">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <br>
+      <a href="https://www.facebook.com/MorganFreeman" class="fa fa-facebook"></a>
+      <a href="https://www.linkedin.com/in/ohad-miller-sise/" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com/bengurionuniversity/" class="fa fa-instagram"></a>
+      <a href="https://github.com/ohad13" class="fa fa-github"></a> 
+  </p>
+  <!-- Scroll up Button-->
+   <button id="scrollToTopBtn" style="text-align: middle;">☝️</button>
+  
+  <script>
+    function addEmoji(emoji) 
+    {
+      let inputEle = document.getElementById('input');
+      emo.value += emoji;
+    }
+    function toggleEmojiDrawer() 
+    {
+      let drawer = document.getElementById('drawer');
+      if (drawer.classList.contains('hidden')) {
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+    </script>
+    
+    <script>
+        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        var rootElement = document.documentElement;
+
+        function scrollToTop() {
+          // Scroll to top logic
+          rootElement.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        }
+        scrollToTopBtn.addEventListener("click", scrollToTop);
+    </script>
 </section>
-
-
-<script type="text/javascript">
-$(function(){
-  $("#nav a").click(function(e){
-    e.preventDefault();
-    $('html,body').scrollTo(this.hash,this.hash); 
-  });
-});
-</script>
-<script type="text/javascript">
- $(document).scroll(function() {
-    $('#menu').toggle($(this).scrollTop()>1000)
- });​
- </script>
 </body>
 </html>
