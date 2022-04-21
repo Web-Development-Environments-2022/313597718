@@ -233,11 +233,11 @@
       <!--input  title="תוכן ההודעה" id="emo1" type="text" name="name" placeholder="text" white-space="pre"; required></br-->
       <textarea id="emo" style="width: 400px; height: 100px;" title="תוכן ההודעה" placeholder="text" wrap="soft"></textarea>
       <input type="hidden" name="_next" value="https://web-development-environments-2021.github.io/assignment1-ohad13/">
-      <button title="שלח" type="submit">Submit</button></br>
-      <button onclick="toggleEmojiDrawer()">Emojis</button></br>
-
-      <input type="hidden" name="_captcha" value="false"> <!-- remove the: "not a robot" page -->
-    </form> 
+      <button title="שלח" type="submit">Submit</button>
+      
+      <input type="hidden" name="_captcha" value="True"> <!-- remove the: "not a robot" page -->
+    </form>
+    <button onclick="toggleEmojiDrawer()">Emojis</button></br> 
         <div id="drawer" class="emoji-drawer hidden"> 
           <div class="emoji" onclick="addEmoji(this.innerHTML)">😀</div>
           <div class="emoji" onclick="addEmoji(this.innerHTML)">😃</div>
