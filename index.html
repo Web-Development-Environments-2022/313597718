@@ -69,29 +69,18 @@
 <br/>
 <!---->
 <div id="imageGallery" style="text-align: center;">    
-  <img id="image" src="src/Morgan3.jpg"  text-align="center"/>        
+  <img id="image2" src="src/Morgan2.jpg"  text-align="center"/>        
+  <img id="image3" src="src/Morgan3.jpg"  text-align="center"/>        
+  <img id="image4" src="src/Morgan4.jpg"  text-align="center"/>        
+  <img id="image5" src="src/Morgan5.jpg"  text-align="center"/>        
+  <img id="image5" src="src/Morgan6.jpg"  text-align="center"/>        
+  <img id="image5" src="src/Morgan5.jpg"  text-align="center"/>        
+  <img id="image5" src="src/Morgan9.jpg"  text-align="center"/>        
+  <img id="image5" src="src/Morgan9.webp"  text-align="center"/>        
 </div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script><!-- import the JQury lib-->
 
-<script>
-  $( document ).ready(function() {
-      var images = [
-          "src/Morgan2.jpg",
-          "src/Morgan3.jpg",
-          "src/Morgan4.jpg",
-          "src/Morgan5.jpg"    
-      ];
-      var imageIndex = 0;
-      $("#image").on("click", function(){          
-          imageIndex = (imageIndex + images.length -1) % (images.length);    
-          $("#image").attr('src', images[imageIndex]);
-      });
-      $("#image").attr(images[0]);
-
-  });
-</script>
-<!---->
 <br/>
 </section>
 
