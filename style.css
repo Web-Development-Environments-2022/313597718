@@ -7,10 +7,10 @@
 }
 
 body {
-	background-color:rgb(0, 243, 198)
+	/*background-color:rgb(243, 203, 0);*/
+	background-image: url('src/back.jpg');
+	cursor: unset;
 }
-  
-
 ul.nav {
 	margin-top: 0;
 	position: fixed;
@@ -18,7 +18,7 @@ ul.nav {
 	width: 100%;
 	overflow: hidden;
 	padding-left: 0px;
-	background-color: #3D99CE;
+	background-color: rgba(255, 0, 0, 0.622);
 	text-align: center;
 	
   }
@@ -28,7 +28,7 @@ ul.nav > li {
 	padding: 20px 30px;
   }
 ul.nav > li:hover {
-	background-color: #2779BF;
+	background-color: #bf2727;
   }
 ul.nav > li > a {
 	color: white;
@@ -38,7 +38,7 @@ ul.nav > li > a {
   }
 h1{
 	text-align: center;
-	color:rgb(21, 0, 255);
+	color:rgb(255, 255, 255);
 	display: block;
 	font-size: 3em;
 	margin-top: 0.80em;
@@ -49,7 +49,7 @@ h1{
   }
 h2 {
 	text-align: center;
-	color:rgb(0, 128, 122);
+	color:rgb(230, 230, 230);
 	display: block;
 	font-size: 2em;
 	margin-top: 0.67em;
@@ -66,9 +66,9 @@ p{
   }
 
 pi{
-	color:black;
+	color:rgb(0, 0, 0);
 	text-align : left;
-	font-size: 1.2em;
+	font-size: 1.5em;
   }
 
 IMG.displayed { 
@@ -76,6 +76,12 @@ IMG.displayed {
     margin-left: auto;
     margin-right: auto 
 }
+img {
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+}
+
 .emoji-drawer {
 	  display: grid;
 	  
@@ -111,7 +117,7 @@ IMG.displayed {
 .separator::after {
 	content: '';
 	flex: 1;
-	border-bottom: 4px solid rgb(53, 43, 234);
+	border-bottom: 4px solid rgb(0, 0, 0);
 	}
 
 .separator:not(:empty)::before {
@@ -198,7 +204,7 @@ IMG.displayed {
 	text-align: end;
 	}
   th, td {
-	background-color: #96d4a9;
+	background-color: rgb(255, 143, 0);
 	margin-left: auto;
 	margin-right: auto;
   }
